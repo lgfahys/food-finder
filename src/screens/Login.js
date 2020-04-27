@@ -4,11 +4,12 @@ import { Icon } from 'react-native-elements';
 import { light_red_color, white_color } from '../utils/colorUtils';
 import TextInput from '../uikit/TextInput';
 import HeadingText from '../uikit/HeadingText';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default class Login extends Component {
     render() {
         return (
-            <View
+            <SafeAreaView
                 style={styles.container}
             >                
                 <KeyboardAvoidingView behavior={Platform.OS == "ios" ? "padding" : "height"} style={styles.card}>
@@ -36,7 +37,7 @@ export default class Login extends Component {
                         </View>
                     </ScrollView>
                 </KeyboardAvoidingView>
-            </View>
+            </SafeAreaView>
         )
     }
 }
