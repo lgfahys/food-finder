@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Login from '../screens/Login';
-import Signup from '../screens/Signup';
+import Landing from '../screens/Landing';
 
 export default class AppNav extends Component {
     render () {
@@ -15,10 +14,9 @@ export default class AppNav extends Component {
                         screenOptions={{
                             headerShown: false
                         }} 
-                        initialRouteName="Login"
+                        initialRouteName="Landing"
                     >
-                        <Stack.Screen name="Login" component={Login} />
-                        <Stack.Screen name="Signup" component={Signup} />
+                        <Stack.Screen name="Landing" component={Landing} />
                     </Stack.Navigator>
                 </NavigationContainer>
             </SafeAreaProvider>
